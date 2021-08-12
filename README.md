@@ -2,6 +2,8 @@ Hello there!
 I'm creating my first "big" project, I'm trying to replicate the encrypting machine Enigma in JavaScript.
 Maybe I'll try to create an interface in HTML and CSS, but for now is just JavaScript :)
 
+Essa "máquina" ainda não faz o trabalho de decodificar um código codificado nela mesma. Porém ainda farei essa feature.
+
 Descrição dos arquivos (depois traduzo)
 
 enigma.js -> É onde entra o texto e sai o código. É necessário que na chamada da função selecione 3 valores ('I', 'II', 'III', 'IV', 'V') que não podem se repetir, todos entre aspas. Após a seleção deles, deve-se colocar o texto que será codificado, também entre aspas.

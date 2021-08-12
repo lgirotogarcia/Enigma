@@ -18,4 +18,4 @@ for(i = 0; i > slowRotor.length; i++){
 let codificar = function(fast, middle, slow, code){
     return slowRotor(slow, middleRotor(middle,fastRotor(fast,code)));
 }
-console.log(codificar('V', 'III', 'I', 'A'));
+console.log(codificar('V', 'IV', 'III', 'dois um'));
