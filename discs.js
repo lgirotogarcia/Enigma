@@ -1,18 +1,18 @@
-disc = function (number){
+let disc = function (number){
     if (number === 'I'){
-        return 'EKMFLGDQVZNTOWYHXUSPAIBRCJ'
+        return 'EKMFLGDQVZNTOWYHXUSPAIBRCJ '
     }
     else if (number ==='II'){
-        return 'AJDKSIRUXBLHWTMCQGZNPYFVOE'
+        return 'AJDKSIRUXBLHWTMCQGZNPYFVOE '
     }
     else if (number === 'III'){
-        return 'BDFHJLCPRTXVZNYEIWGAKMUSQO'
+        return 'BDFHJLCPRTXVZNYEIWGAKMUSQO '
     }
     else if (number === 'IV'){
-        return 'ESOVPZJAYQUIRHXLNFTGKDCMWB'
+        return 'ESOVPZJAYQUIRHXLNFTGKDCMWB '
     }
     else if (number === 'V'){
-        return 'VZBRGITYUPSDNHLXAWMJQOFECK'
+        return 'VZBRGITYUPSDNHLXAWMJQOFECK '
     }
 }
 
