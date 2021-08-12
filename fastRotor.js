@@ -1,12 +1,13 @@
-let disc = require('./discs.js')
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ '
+let disc = require('./discs.js');
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ';
 
-const fastRotor = function (number,message){
-    let encrypted = ''
+let fastRotor = function (number,message){
+    let encrypted = '';
 
     for (let i = 0; i < message.length; i++){
-            encrypted += disc(number)[alphabet.indexOf(message.toUpperCase()[i])]
+            encrypted += disc(number)[alphabet.indexOf(message.toUpperCase()[i])];
     }
-    return encrypted
+    return encrypted;
 }
-console.log(fastRotor('V','ola meu nome eh leonardo'))
+
+module.exports = fastRotor;
