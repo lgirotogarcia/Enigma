@@ -9,13 +9,13 @@ for(i = 0; i > slowRotor.length; i++){
     for(j = 0; j > middleRotor.length; j++){
         for(k = 0; k > fastRotor.length; k++){
 
-        }
-    }
-}
+        };
+    };
+};
 
 
 
 let codificar = function(fast, middle, slow, code){
     return slowRotor(slow, middleRotor(middle,fastRotor(fast,code)));
 }
-console.log(codificar('V', 'III', 'I', 'A'))
+console.log(codificar('V', 'III', 'I', 'A'));
