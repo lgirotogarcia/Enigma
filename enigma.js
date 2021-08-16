@@ -14,4 +14,4 @@ const rotor = require('./rotor.js');
 const codificar = function(fast, middle, slow, code){
     return rotor(slow, rotor(middle,rotor(fast,code)));
 }
-console.log(codificar('V', 'IV', 'II', 'dois um'));
+console.log(codificar(4, 3, 0, 'dois um'));

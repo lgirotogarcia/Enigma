@@ -5,7 +5,7 @@ let fastRotor = function (number,message){
     let encrypted = '';
 
     for (let i = 0; i < message.length; i++){
-            encrypted += disc(number)[alphabet.indexOf(message.toUpperCase()[i])];
+            encrypted += disc[number][alphabet.indexOf(message.toUpperCase()[i])];
     };
     return encrypted;
 };
