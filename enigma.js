@@ -1,4 +1,5 @@
 const rotor = require('./rotor.js');
+const text = require('./text')
 
     /* Rotação dos rotores, de modo que o fast gire a cada letra teclada, a cada volta completa (26 vezes) do fast,
     o middle girará uma posição, e após uma volta completa do middle, o slow girará uma posição. */
@@ -12,6 +13,8 @@ const rotor = require('./rotor.js');
 // };
 
 const codificar = function(fast, middle, slow, code){
-    return rotor(slow, rotor(middle,rotor(fast,code)));
+    return rotor(slow, rotor(middle,rotor(fast,text(code))));
 }
-console.log(codificar(1, 5, 4, 'do'));
+console.log(codificar(1, 5, 4, 'a'));
+
+module.exports = codificar
