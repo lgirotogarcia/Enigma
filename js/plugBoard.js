@@ -14,6 +14,7 @@ const inverterTexto = function (number, letter1, letter2){
     return alphabet[number]
 }
 
-console.log(inverterTexto(0,'A','B'))
+module.exports = inverterTexto
 
 
+// FAZER UM LOOP EM QUE SE PASSA CADA LETRA DA PALAVRA, QUE QUANDO PASSAR PELAS LETRAS INDICADAS NOS PARAMETROS DA FUNÇÃO, INVERTERÁ ELA DE POSIÇÃO
