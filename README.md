@@ -13,3 +13,5 @@ discs.js -> É onde é gerenciado o tipo de disco que será usado em cada "rotor
 rotor.js -> O texto inserido no módulo enigma.js é enviado para a função que está nesse módulo, as letras são codificadas de acordo com o "disco" escolhido em enigma.js. Após a codificação, o resultado é recodificado mais duas vezes.
 
 plugBoard.js -> Função responsável por alterar a posição de 3 pares de letras, como por exemplo A e H, em que todas as vezes que for computado a letra A, ela será automáticamente alterada para H, e vice e versa.
+
+decript.js -> O código inserido no módulo enigma.js é enviado para a função que está nesse módulo, as letras são decodificadas de acordo com o "disco" escolhido em enigma.js. Após a decodificação, o resultado é redecodificado mais duas vezes.
