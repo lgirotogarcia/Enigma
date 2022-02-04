@@ -16,11 +16,11 @@ const decript = require('./decript.js');
 const codificar = function(fast, middle, slow, code){
     return rotor(fast,(rotor(middle,(rotor(slow,rotor(slow, rotor(middle,rotor(fast,text(code)))))))));
 }
-console.log(codificar(1, 5, 4, 'Olar'));
+console.log(codificar(1, 5, 4, 'Qualquer coisa'));
 
 const decodificar = function(fast, middle, slow, code){
     return decript(fast,(decript(middle,(decript(slow,decript(slow, decript(middle,decript(fast,text(code)))))))));
 }
-console.log(decodificar(1, 5, 4, 'lqec'));
+console.log(decodificar(1, 5, 4, 'FYEQFYUC ILWVE'));
 
 module.exports = codificar, decodificar;
