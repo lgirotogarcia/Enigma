@@ -1,7 +1,7 @@
 const discs = require('./discs.js');
 const plugBoard = require('./plugBoard.js')
 
-let rotor = function (number,message,letter1,letter2){
+const rotor = function (number,message,letter1,letter2){
     let encrypted = '';
 
     for (let i = 0; i < message.length; i++){

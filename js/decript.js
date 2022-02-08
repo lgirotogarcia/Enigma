@@ -1,7 +1,7 @@
 const discs = require('./discs.js');
 const plugBoard = require('./plugBoard.js')
 
-let decriptRotor = function (number,criptMessage){
+const decriptRotor = function (number,criptMessage){
     let decrypted = '';
 
     for (let i = 0; i < criptMessage.length; i++){

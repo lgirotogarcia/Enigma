@@ -10,10 +10,14 @@ const disc = [
 
 let message = 'ola eu sou o leo'
 for (let i = 0; i < message.length; i++) {
+    let test = '';
     if (message[i] === ' ') {
-       return disc[6[0]]
+        test +='tchaca';
+    } else if (message[i] !== ' ') {
+        test += message[i];
     }
-    console.log('tchaca')
+
+    console.log(test)
 }
 
 
