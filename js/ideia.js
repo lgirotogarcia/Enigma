@@ -4,21 +4,23 @@ const disc = [
     ['A','J','D','K','S','I','R','U','X','B','L','H','W','T','M','C','Q','G','Z','N','P','Y','F','V','O','E'],
     ['B','D','F','H','J','L','C','P','R','T','X','V','Z','N','Y','E','I','W','G','A','K','M','U','S','Q','O'],
     ['E','S','O','V','P','Z','J','A','Y','Q','U','I','R','H','X','L','N','F','T','G','K','D','C','M','W','B'],
-    ['V','Z','B','R','G','I','T','Y','U','P','S','D','N','H','L','X','A','W','M','J','Q','O','F','E','C','K'],
-    [' ']
+    ['V','Z','B','R','G','I','T','Y','U','P','S','D','N','H','L','X','A','W','M','J','Q','O','F','E','C','K']
 ]
 
-let message = 'ola eu sou o leo'
-for (let i = 0; i < message.length; i++) {
+const ideia = function (number, message){
     let test = '';
-    if (message[i] === ' ') {
-        test +='tchaca';
-    } else if (message[i] !== ' ') {
-        test += message[i];
-    }
 
+    for (let i = 0; i < message.length; i++) {
+        if (message[i] === ' ') {
+            test +=' ';
+        } else if (message[i] !== ' ') {
+            test += disc[number][disc[0].indexOf(message.toUpperCase()[i])];
+        }        
+    }
     console.log(test)
 }
 
 
+ideia(1,'a')
 // Agora os "rotores" podem rodar sem quebrar os espaços.
+// Se colocar ao final da função "return disc", ao "rotacionar" o alfabeto, a variável disc é alterada daquela maneira? Para que se possa usá-la como "base" para decriptar?
