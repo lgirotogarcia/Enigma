@@ -24,4 +24,3 @@ const ideia = function (number, message){
 ideia(1,'a')
 // Agora os "rotores" podem rodar sem quebrar os espaços.
 // Se colocar ao final da função "return disc", ao "rotacionar" o alfabeto, a variável disc é alterada daquela maneira? Para que se possa usá-la como "base" para decriptar?/
-// teste
