@@ -5,16 +5,11 @@ const decrypt = require('./decrypt.js');
 
 
 const codificar = function(fast, middle, slow, code){
-    return encrypt(fast,(encrypt(middle,(encrypt(slow,encrypt(slow, encrypt(middle,encrypt(fast,text(code)))))))));
+    return {encrypt: encrypt(fast,text(code)), decript: decrypt(fast,encrypt(fast,text(code)))};
 }
-console.log(codificar(1, 5, 4, 'Qualquer coisa'));
-
-const decodificar = function(fast, middle, slow, code){
-    return decrypt(fast,(decrypt(middle,(decrypt(slow,decrypt(slow, decrypt(middle,decrypt(fast,text(code)))))))));
-}
-console.log(decodificar(1, 5, 4, 'FYEQFYUC ILWVE'));
+console.log(codificar(1, 5, 4, 'Leonardo'));
 
 
 
 
-module.exports = codificar, decodificar;
+module.exports = codificar;
