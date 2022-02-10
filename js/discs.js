@@ -7,4 +7,7 @@ const disc = [
     ['V','Z','B','R','G','I','T','Y','U','P','S','D','N','H','L','X','A','W','M','J','Q','O','F','E','C','K']
 ];
 
+
+
+
 module.exports = disc;

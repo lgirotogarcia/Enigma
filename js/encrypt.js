@@ -1,5 +1,7 @@
 const discs = require('./discs.js');
 
+
+
 const rotor = function (number,message){
     let encrypted = '';
 
@@ -8,4 +10,8 @@ const rotor = function (number,message){
     };
     return encrypted;
 };
+
+
+
+
 module.exports = rotor;

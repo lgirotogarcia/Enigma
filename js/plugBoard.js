@@ -2,6 +2,7 @@ const discs = require("./discs");
 const text = require("./text.js");
 
 
+
 const inverterTexto = function (number, letter1, letter2){
     const alphabet = discs;
 
@@ -13,6 +14,9 @@ const inverterTexto = function (number, letter1, letter2){
 
     return alphabet[number];
 }
+
+
+
 
 module.exports = inverterTexto;
 
