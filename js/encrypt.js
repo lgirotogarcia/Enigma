@@ -11,7 +11,7 @@ const rotor = function (number,message){
     return encrypted;
 };
 
-
+//olar
 
 
 module.exports = rotor;
