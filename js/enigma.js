@@ -14,13 +14,15 @@ const decript = require('./decript.js');
 // };
 
 const codificar = function(fast, middle, slow, code){
-    return rotor(fast,(rotor(middle,(rotor(slow,rotor(slow, rotor(middle,rotor(fast,text(code)))))))));
+    let lala = rotor(fast,(rotor(middle,(rotor(slow,rotor(slow, rotor(middle,rotor(fast,text(code)))))))));
+    decode()
+    return lala
 }
-console.log(codificar(1, 5, 4, 'Qualquer coisa'));
+console.log(codificar(1, 5, 4, 'Matheus Leal'));
 
 const decodificar = function(fast, middle, slow, code){
     return decript(fast,(decript(middle,(decript(slow,decript(slow, decript(middle,decript(fast,text(code)))))))));
 }
-console.log(decodificar(1, 5, 4, 'FYEQFYUC ILWVE'));
+console.log(decodificar(1, 5, 4, 'MEBRUYV QUEQ'));
 
 module.exports = codificar, decodificar;
