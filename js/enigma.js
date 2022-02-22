@@ -4,13 +4,27 @@ const decrypt = require('./decrypt.js');
 
 
 
-const codificar = function(fast, middle, slow, code){
-    return {encrypt: encrypt(fast,encrypt(middle,encrypt(slow,encrypt(slow, encrypt(middle,encrypt(fast,text(code))))))),
-            decrypt: decrypt(fast,decrypt(middle,decrypt(slow,decrypt(slow,decrypt(middle,decrypt(fast,encrypt(fast,encrypt(middle,encrypt(slow,encrypt(slow, encrypt(middle,encrypt(fast,text(code)))))))))))))};
+
+const enigma = function(fast, middle, slow, code){
+    const codificar = function(fast, middle, slow, code){
+    const encrypt = encrypt(fast,encrypt(middle,encrypt(slow,encrypt(slow, encrypt(middle,encrypt(fast,text(code)))))))
+        return encrypt    
+    }
+    const decodificar = function (fast, middle, slow, code){
+    const decrypto = decrypt(fast,decrypt(middle,decrypt(slow,decrypt(slow,decrypt(middle,decrypt(fast,text(code)))))))
+    codificar (fast, middle, slow, code)
+        return decrypto
+    }
+    decodificar(fast, middle, slow, code)
+
+    return {codificado:encrypt,
+            decodificado: decodificar}
 }
-console.log(codificar(1, 5, 4, 'Leonardo oi oi'));
+
+
+console.log(enigma(1, 5, 4, 'a'));
 
 
 
 
-module.exports = codificar;
+module.exports = enigma;
