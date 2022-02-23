@@ -9,6 +9,7 @@ const code = function(fast, middle, slow, code){
         let encryptRotor = encrypt(fast,encrypt(middle,encrypt(slow,encrypt(slow,encrypt(middle,encrypt(fast,code))))));        
         
         return encryptRotor;
+        
     };
     
     const decrypto = function (fast, middle, slow, code) {
