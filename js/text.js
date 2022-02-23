@@ -1,5 +1,5 @@
 const text = function(message){
-    return message
+    return message.toString
 }
 
 module.exports = text

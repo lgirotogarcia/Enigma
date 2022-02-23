@@ -1,5 +1,5 @@
 const discs = require('./discs.js');
-
+const moveAlphabet = require('./moveAlphabet.js')
 
 
 const encryptRotor = function (number,message){
@@ -13,6 +13,8 @@ const encryptRotor = function (number,message){
         else {
             encrypted += discs[number][discs[0].indexOf(message.toUpperCase()[i])];
         };
+        moveAlphabet(number);
+
     };
     return encrypted;
 };

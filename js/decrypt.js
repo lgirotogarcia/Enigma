@@ -1,5 +1,5 @@
 const discs = require('./discs.js');
-
+const returnAlphabet = require('./returnAlphabet.js')
 
 
 const decriptRotor = function (number,criptMessage){
@@ -13,6 +13,8 @@ const decriptRotor = function (number,criptMessage){
         else {
             decrypted += discs[0][discs[number].indexOf(criptMessage.toUpperCase()[i])];
         };
+
+        returnAlphabet(number);
     };
     return decrypted;
 };

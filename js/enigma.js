@@ -9,7 +9,7 @@ const code = function(fast, middle, slow, code){
         let encryptRotor = encrypt(fast,encrypt(middle,encrypt(slow,encrypt(slow,encrypt(middle,encrypt(fast,code))))));        
         
         return encryptRotor;
-        
+
     };
     
     const decrypto = function (fast, middle, slow, code) {
@@ -21,7 +21,7 @@ const code = function(fast, middle, slow, code){
     };
 
     const encrypted = encrypto(fast, middle, slow, code);
-    const decrypted = decrypto(fast, middle,slow, encrypted);
+    const decrypted = decrypto(fast, middle, slow, encrypted);
     
     const results = {
         encrypted: encrypted,
@@ -31,7 +31,7 @@ const code = function(fast, middle, slow, code){
     return results
 };
 
-console.log(code(1,5,4, 'Oi eu me chamo Leonardo Giroto Garcia'));
+console.log(code(1,1,1, 'aa'));
 
 
 

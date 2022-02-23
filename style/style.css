@@ -37,7 +37,7 @@ h1 {
 }
 
 
-.encrypted::selection, .decrypted::selection, h3::selection, h1::selection, br::selection, .text-field::selection, button::selection{
+.encrypted::selection, .decrypted::selection, h3::selection, h1::selection, br::selection, .text-field::selection, button::selection, .rotor-selection::selection{
     background-color: #669966;
     color: #fff;
 }
@@ -72,8 +72,20 @@ button:hover {
 }
 
 .text-field {
-    height: 50px;
+    height: 53px;
     width: 750px;
     background-color: rgb(194, 194, 194);
     color: #000;
+}
+
+.rotor-selection {
+    height: 55px;
+    width: fit-content;
+    background-color: rgb(194, 194, 194);
+    color: #000;
+    border: 5px;
+}
+
+#first-selection {
+    margin-left: 3.5px;
 }
