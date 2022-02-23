@@ -2,29 +2,37 @@ const encrypt = require('./encrypt.js');
 const text = require('./text.js');
 const decrypt = require('./decrypt.js');
 
-
-
-
-const enigma = function(fast, middle, slow, code){
-    const codificar = function(fast, middle, slow, code){
-    const encrypt = encrypt(fast,encrypt(middle,encrypt(slow,encrypt(slow, encrypt(middle,encrypt(fast,text(code)))))))
-        return encrypt    
-    }
-    const decodificar = function (fast, middle, slow, code){
-    const decrypto = decrypt(fast,decrypt(middle,decrypt(slow,decrypt(slow,decrypt(middle,decrypt(fast,text(code)))))))
-    codificar (fast, middle, slow, code)
-        return decrypto
-    }
-    decodificar(fast, middle, slow, code)
-
-    return {codificado:encrypt,
-            decodificado: decodificar}
+const decrypto = function (fast, middle, slow, code) {
+    
+    let decrypting = decrypt(fast,decrypt(middle,decrypt(slow,decrypt(slow,decrypt(middle,decrypt(fast,code))))));
+    
+    return decrypting;
 }
 
 
-console.log(enigma(1, 5, 4, 'a'));
+const code = function(fast, middle, slow, code){
+    
+
+    const encrypto = function (fast, middle, slow, code) {
+        
+        let encryptRotor = encrypt(fast,encrypt(middle,encrypt(slow,encrypt(slow,encrypt(middle,encrypt(fast,code))))));        
+        
+        return encryptRotor.toString();
+    };
+    
+    const encrypted = encrypto(fast, middle, slow, code)
+    const decrypted = decrypto(fast, middle,slow, encrypted)
+    
+    const results = {
+        encrypted: encrypted,
+        decrypted: decrypted
+    };
+
+    return results
+};
+
+console.log(code(1,5,4, 'Oi eu me chamo Leonardo Giroto Garcia'));
 
 
 
-
-module.exports = enigma;
+module.exports = code;

@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(37, 36, 36);
+}
+
+body::selection{
+    background-color: #669966;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color:#669966;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+.encrypted, .decrypted {
+    margin: 10px;
+    background-color: rgb(43, 43, 43);
+    color: #669966;
+    display:grid;
+    padding-bottom: 10px;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px -2px rgb(0 0 0/ 75%);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.encrypted > h3, .decrypted > h3 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+
+.encrypted::selection, .decrypted::selection, h3::selection, h1::selection, br::selection, .text-field::selection, button::selection{
+    background-color: #669966;
+    color: #fff;
+}
+
+button:hover::selection {
+    background-color: #fff;
+    color: #669966;
+}
+
+button {
+    width: fit-content;
+    height: 55px;
+    border-radius: 0px;
+    text-decoration: none;
+    border: none;
+    background-color: rgb(194, 194, 194);
+    color: #000;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    color: #fff;
+    background-color: #669966;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    border:none;
+    position:relative;
+}
+
+.text-field {
+    height: 50px;
+    width: 750px;
+    background-color: rgb(194, 194, 194);
+    color: #000;
+}

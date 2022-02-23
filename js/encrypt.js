@@ -2,7 +2,7 @@ const discs = require('./discs.js');
 
 
 
-const rotor = function (number,message){
+const encryptRotor = function (number,message){
     let encrypted = '';
 
     for (let i = 0; i < message.length; i++){
@@ -20,4 +20,4 @@ const rotor = function (number,message){
 
 
 
-module.exports = rotor;
+module.exports = encryptRotor;
