@@ -29,12 +29,40 @@ ideia(1,'a');
 
 
 
-for(i = 0; i > slowRotor.length; i++){
-    for(j = 0; j > middleRotor.length; j++){
-        for(k = 0; k > fastRotor.length; k++){
+for(i = 0; i > disc[slowRotor].length; i++){
 
+    for(j = 0; j > disc[middleRotor].length; j++){
+    
+        for(k = 0; k > disc[fastRotor].length; k++){
+           
+            const alphabet = disc[fastRotor]
+
+            const result = alphabet.splice(0,1);
+        
+            alphabet.splice(alphabet.length,0,result[0]);
+        
+            return alphabet;
+            
         };
+           
+        const alphabet = disc[middleRotor]
+
+        const result = alphabet.splice(0,1);
+    
+        alphabet.splice(alphabet.length,0,result[0]);
+    
+        return alphabet;
+        
     };
+           
+    const alphabet = disc[slowRotor]
+
+    const result = alphabet.splice(0,1);
+
+    alphabet.splice(alphabet.length,0,result[0]);
+
+    return alphabet;
+    
 };
 /* Rotação dos rotores, de modo que o fast gire a cada letra teclada, a cada volta completa (26 vezes) do fast,
     o middle girará uma posição, e após uma volta completa do middle, o slow girará uma posição. */

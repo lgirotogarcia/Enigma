@@ -37,7 +37,7 @@ h1 {
 }
 
 
-.encrypted::selection, .decrypted::selection, h3::selection, h1::selection, br::selection, .text-field::selection, button::selection{
+.encrypted::selection, .decrypted::selection, h3::selection, h1::selection, br::selection, .text-field::selection, button::selection, .rotor-selection::selection{
     background-color: #669966;
     color: #fff;
 }
@@ -50,30 +50,54 @@ button:hover::selection {
 button {
     width: fit-content;
     height: 55px;
-    border-radius: 0px;
+    border-radius: 2px;
     text-decoration: none;
-    border: none;
+    border-left-width: 1px;
+    border-color:rgb(194, 194, 194);
+    border-left-color:rgb(37, 36, 36);
+    border-style:solid;
     background-color: rgb(194, 194, 194);
     color: #000;
     cursor: pointer;
-    
+    position:sticky;
 }
 
 button:hover {
     color: #fff;
     background-color: #669966;
+    border-color:#669966;
+    border-left-width: 1px;
+    border-left-color:rgb(37, 36, 36);
 }
 
 .message {
     display: flex;
     justify-content: center;
-    border:none;
+    /* border:none; */
     position:relative;
 }
 
 .text-field {
-    height: 50px;
+    border-radius: 2px;
+    display: inline-flex;
+    height: 53px;
     width: 750px;
     background-color: rgb(194, 194, 194);
     color: #000;
+    border: none;
+    position: relative;
+    left: 55px
+}
+
+.rotor-selection {
+    height: 55px;
+    width: fit-content;
+    background-color: rgb(194, 194, 194);
+    color: #000;
+    border: 5px;
+    border-radius: 2px;
+}
+
+#first-selection {
+    margin-left: 3.5px;
 }

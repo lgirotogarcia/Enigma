@@ -1,9 +1,9 @@
 const discs = require('./discs.js');
 
 
-const alphabet = discs[number]
 
 const moveLetter = function(number){
+    const alphabet = discs[number]
 
     const result = alphabet.splice(0,1);
 
