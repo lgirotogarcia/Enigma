@@ -1,5 +1,4 @@
 const encrypt = require('./encrypt.js');
-const text = require('./text.js');
 const decrypt = require('./decrypt.js');
 
 const code = function(fast, middle, slow, code){
@@ -31,7 +30,7 @@ const code = function(fast, middle, slow, code){
     return results
 };
 
-console.log(code(1,1,1, 'aa'));
+console.log(code(1,5,4, 'aa'));
 
 
 
