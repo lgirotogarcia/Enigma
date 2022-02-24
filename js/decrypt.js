@@ -3,20 +3,36 @@ const returnAlphabet = require('./returnAlphabet.js')
 
 
 const decriptRotor = function (number,criptMessage){
-    let decrypted = '';
+    let result = {
+        decrypted: '',
+        alphabet: discs[number]
+    }
 
     for (let i = 0; i < criptMessage.length; i++){
-
-        if (criptMessage[i] === ' '){
-            decrypted += ' ';
+        const returnLetter = function(){
+        
+            const letter = result.alphabet.splice(result.alphabet.length-1,1);
+        
+            result.alphabet.splice(0,0,letter[0]);
+            
+            return result.alphabet;
         }
-        else {
-            decrypted += discs[0][discs[number].indexOf(criptMessage.toUpperCase()[i])];
-        };
+        
+        // returnLetter()
+        
+        for (let k = 0; k < 1; k++){
 
+            if (criptMessage[i] === ' '){
+                result.decrypted += ' ';
+            }
+            else {
+                result.decrypted += discs[0][discs[number].indexOf(criptMessage.toUpperCase()[i])];
+            };
+        }
+        returnLetter()
         // returnAlphabet(number);
     };
-    return decrypted;
+    return result;
 };
 
 

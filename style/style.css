@@ -63,9 +63,9 @@ button {
 }
 
 button:hover {
-    color: #fff;
-    background-color: #669966;
-    border-color:#669966;
+    color: #000;
+    background-color: rgb(186,186,186);
+    border-color:rgb(186,186,186);
     border-left-width: 1px;
     border-left-color:rgb(37, 36, 36);
 }
