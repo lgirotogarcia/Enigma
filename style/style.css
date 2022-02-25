@@ -50,7 +50,10 @@ button:hover::selection {
 button {
     width: fit-content;
     height: 55px;
-    border-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 3px;
     text-decoration: none;
     border-left-width: 1px;
     border-color:rgb(194, 194, 194);
@@ -59,7 +62,7 @@ button {
     background-color: rgb(194, 194, 194);
     color: #000;
     cursor: pointer;
-    position:sticky;
+    /* position:static; */
 }
 
 button:hover {
@@ -77,16 +80,30 @@ button:hover {
     position:relative;
 }
 
+.text-field:placeholder-shown {
+    font-style: italic;
+}
+.text-field:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 .text-field {
-    border-radius: 2px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 0px;
     display: inline-flex;
     height: 53px;
     width: 750px;
     background-color: rgb(194, 194, 194);
     color: #000;
     border: none;
-    position: relative;
-    left: 55px
+    position: static;
+    left: 55px;
+    padding-left: 8px;
+    padding-right: 4px;
 }
 
 .rotor-selection {

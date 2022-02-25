@@ -27,7 +27,7 @@ const code = function(fast, middle, slow, code){
         decrypted: decrypted
     };
 
-    return results
+    return results;
 };
 
 console.log(code(1,5,4, 'aaa'));

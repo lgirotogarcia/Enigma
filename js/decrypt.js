@@ -6,9 +6,10 @@ const decriptRotor = function (number,criptMessage){
     let result = {
         decrypted: '',
         alphabet: discs[number]
-    }
+    };
 
     for (let i = 0; i < criptMessage.length; i++){
+        
         const returnLetter = function(){
         
             const letter = result.alphabet.splice(result.alphabet.length-1,1);
@@ -16,23 +17,30 @@ const decriptRotor = function (number,criptMessage){
             result.alphabet.splice(0,0,letter[0]);
             
             return result.alphabet;
+
         }
         
-        // returnLetter()
-        
+        returnLetter();
+
         for (let k = 0; k < 1; k++){
 
             if (criptMessage[i] === ' '){
+
                 result.decrypted += ' ';
+            
             }
             else {
+            
                 result.decrypted += discs[0][discs[number].indexOf(criptMessage.toUpperCase()[i])];
+            
             };
+        
         }
-        returnLetter()
-        // returnAlphabet(number);
+
     };
+
     return result;
+
 };
 
 

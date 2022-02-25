@@ -11,6 +11,15 @@ const encryptRotor = function (number,message){
     }
 
     for (let i = 0; i < message.length; i++) {
+        const moveAlphabet = function(){
+            
+            const letter = result.alphabet.splice(0,1);
+            
+            result.alphabet.splice(result.alphabet.length,0,letter[0]);
+            
+            return result.alphabet;
+        } 
+
         for (let k = 0; k < 1; k++) {
 
             if (message[i] === ' ') {
@@ -18,23 +27,15 @@ const encryptRotor = function (number,message){
             }
             else {
                 result.encrypted += discs[number][discs[0].indexOf(message.toUpperCase()[i])];
-                
+               
             };
         }
         
-        const moveAlphabet = function(){
-
-            const letter = result.alphabet.splice(0,1);
-            
-            result.alphabet.splice(result.alphabet.length,0,letter[0]);
-            
-            return result.alphabet
-        } 
     
-        moveAlphabet()
+        moveAlphabet();
     };
 
-    return result
+    return result;
 };
 
 
