@@ -1,5 +1,6 @@
 const encrypt = require('./encrypt.js');
 const decrypt = require('./decrypt.js');
+const invertText = require('./invertText.js');
 
 const code = function(fast, middle, slow, code){
     
@@ -19,18 +20,7 @@ const code = function(fast, middle, slow, code){
 
     };
 
-    const invertText = function(code) {
 
-        let reverse = '';
-    
-        for (let i = code.length-1; i >= 0; i--){
-            
-            reverse += code[i];
-        
-        };
-
-        return reverse;
-    }
 
     const encrypted = encrypto(fast, middle, slow, code).encrypted;
     const inverted = invertText(encrypto(fast, middle, slow, code).encrypted);  /* Outra maneira de resolver esse problema de inverter os textos, é inverter os alfabetos, porém, acredito que seja mais dificil*/
