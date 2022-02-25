@@ -19,18 +19,33 @@ const code = function(fast, middle, slow, code){
 
     };
 
-    const encrypted = encrypto(fast, middle, slow, code).encrypted;
-    const decrypted = decrypto(fast, middle, slow, encrypted).decrypted;
+    const invertText = function(code) {
+
+        let reverse = '';
     
+        for (let i = code.length-1; i >= 0; i--){
+            
+            reverse += code[i];
+        
+        };
+
+        return reverse;
+    }
+
+    const encrypted = encrypto(fast, middle, slow, code).encrypted;
+    const inverted = invertText(encrypto(fast, middle, slow, code).encrypted)  /* Outra maneira de resolver esse problema de inverter os textos, é inverter os alfabetos, porém, acredito que seja mais dificil*/
+    const decrypted = decrypto(fast, middle, slow, inverted).decrypted;
+    const finalDecrypt = invertText(decrypted)
+
     const results = {
         encrypted: encrypted,
-        decrypted: decrypted
+        decrypted: finalDecrypt
     };
 
     return results;
 };
 
-console.log(code(1,5,4, 'aaa'));
+console.log(code(1,5,4, 'aaaaaaaaaaaaaaaaaaaaaaaaa'));
 
 
 
