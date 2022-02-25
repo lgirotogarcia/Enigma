@@ -1,17 +1,20 @@
-Hello there!
-I'm creating my first "big" project, I'm trying to replicate the encrypting machine Enigma in JavaScript.
-Maybe I'll try to create an interface in HTML and CSS, but for now is just JavaScript :)
+***Hello there!***
+I'm creating my first "big" project, an encrypting app in JavaScript.
+I'm still creating a visual for this app, be patient please <3
 
-Essa "máquina" ainda não faz o trabalho de decodificar um código codificado nela mesma. Porém ainda farei essa feature.
+This app works inspired by the Enigma machine, it works with basic alphabet, temporarily, (I'll add numbers, special characters and symbols later). In the future, I believe  it can be used to secure messages and numbers, been used for real encryption!
 
-Descrição dos arquivos (depois traduzo)
+At the moment, you can use in the terminal (and it similar), but soon, you'll be able to see the encryption result on a friendly environment.
 
-enigma.js -> É onde entra o texto e sai o código. É necessário que na chamada da função selecione 3 valores ('I', 'II', 'III', 'IV', 'V') que não podem se repetir, todos entre aspas. Após a seleção deles, deve-se colocar o texto que será codificado, também entre aspas.
+Thanks to passing!
 
-discs.js -> É onde é gerenciado o tipo de disco que será usado em cada "rotor" do código.
+----------------------------------------------------
+***Eai!***
+Estou criando meu primeiro "grande" projeto, um app de encriptação em JavaScript.
+Eu ainda estou criando um visual pra esse app, por favor, seja paciente <3
 
-rotor.js -> O texto inserido no módulo enigma.js é enviado para a função que está nesse módulo, as letras são codificadas de acordo com o "disco" escolhido em enigma.js. Após a codificação, o resultado é recodificado mais duas vezes.
+Esse app funciona inspirado na máquina Enigma, no momento funciona somente com alfabeto básico (vou adicionar números, caracteres especiais e simbolos posteriormente). No futuro eu acredito que ela possa ser usado para encriptar mensagens e números, sendo usada para encriptação real!
 
-plugBoard.js -> Função responsável por alterar a posição de 3 pares de letras, como por exemplo A e H, em que todas as vezes que for computado a letra A, ela será automáticamente alterada para H, e vice e versa.
+No momento ela só funciona no terminal (e seus similares), mas em breve, você poderá ver o resultado da encriptação num ambiente mais amigável.
 
-decript.js -> O código inserido no módulo enigma.js é enviado para a função que está nesse módulo, as letras são decodificadas de acordo com o "disco" escolhido em enigma.js. Após a decodificação, o resultado é redecodificado mais duas vezes.
+Obrigado por vir aqui!
