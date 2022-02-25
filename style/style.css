@@ -1,16 +1,18 @@
+* {
+    font-family: 'Roboto Mono', monospace;
+    color:#669966;
+}
+
+*::selection{
+    background-color: #669966;
+    color: #fff;
+}
 body {
     background-color: rgb(37, 36, 36);
 }
 
-body::selection{
-    background-color: #669966;
-    color: #fff;
-}
-
 h1 {
     text-align: center;
-    color:#669966;
-    font-family: 'Roboto Mono', monospace;
     font-weight: 100;
     font-size: 50px;
 }
@@ -18,33 +20,19 @@ h1 {
 .encrypted, .decrypted {
     margin: 10px;
     background-color: rgb(43, 43, 43);
-    color: #669966;
     display:grid;
     padding-bottom: 10px;
     justify-content: center;
     z-index: 1;
     border-radius: 5px;
     box-shadow: 0px 4px 15px -2px rgb(0 0 0/ 75%);
-    font-family: 'Roboto Mono', monospace;
     font-weight: 100;
     font-size: 20px;
 }
 
 .encrypted > h3, .decrypted > h3 {
-    font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     font-size: 30px;
-}
-
-
-.encrypted::selection, .decrypted::selection, h3::selection, h1::selection, br::selection, .text-field::selection, button::selection, .rotor-selection::selection{
-    background-color: #669966;
-    color: #fff;
-}
-
-button:hover::selection {
-    background-color: #fff;
-    color: #669966;
 }
 
 button {
@@ -60,13 +48,12 @@ button {
     border-left-color:rgb(37, 36, 36);
     border-style:solid;
     background-color: rgb(194, 194, 194);
-    color: #000;
+    color: rgb(37, 36, 36);
     cursor: pointer;
-    /* position:static; */
 }
 
 button:hover {
-    color: #000;
+    color: rgb(37, 36, 36);
     background-color: rgb(186,186,186);
     border-color:rgb(186,186,186);
     border-left-width: 1px;
@@ -76,17 +63,7 @@ button:hover {
 .message {
     display: flex;
     justify-content: center;
-    /* border:none; */
     position:relative;
-}
-
-.text-field:placeholder-shown {
-    font-style: italic;
-}
-.text-field:focus {
-    border-color: inherit;
-    -webkit-box-shadow: none;
-    box-shadow: none;
 }
 
 .text-field {
@@ -94,27 +71,49 @@ button:hover {
     border-bottom-right-radius: 0px;
     border-top-left-radius: 3px;
     border-top-right-radius: 0px;
-    display: inline-flex;
     height: 53px;
     width: 750px;
     background-color: rgb(194, 194, 194);
-    color: #000;
+    color: rgb(37, 36, 36);
     border: none;
     position: static;
     left: 55px;
     padding-left: 8px;
     padding-right: 4px;
 }
+.text-field:placeholder-shown {
+    font-style: italic;
+}
+.text-field:focus {
+    outline: none;
+}
 
+.rotor {
+    border: none;
+    position:relative;
+    display: flex;
+}
 .rotor-selection {
     height: 55px;
     width: fit-content;
     background-color: rgb(194, 194, 194);
-    color: #000;
-    border: 5px;
-    border-radius: 2px;
+    color: rgb(37, 36, 36);
+    border-radius: 3px;
+    margin: none;
+    padding: none;
+    border: none;
+    margin-left: 3px;
 }
 
-#first-selection {
-    margin-left: 3.5px;
+optgroup, .rotor-option {
+   color: rgb(37, 36, 36);
+}
+
+.rodape{
+    grid-area: rodape;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.3rem;
+    padding-right: 20px;
 }

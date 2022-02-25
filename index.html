@@ -1,67 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./style/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet">
     <title>Encrypt project</title>
-</head>
-<body>
-    <div>
-        <div class="title">
-            <h1>
-                Encrypt Project
-            </h1>
-        </div>
-        <div class="message">
-            <div class="text-box">
-                <input type="text" class="text-field" placeholder="Type your message.">
+    </head>
+    <body>
+        <div>
+            <div class="title">
+                <h1>
+                    Encrypt Project
+                </h1>
             </div>
-            <div class="button">
-                <button type="Submit"> Encrypt </button>
-            </div>
-            <div class="rotor">
-                <select name="Select your alphabet" class="rotor-selection" id="first-selection">
-                    <optgroup label="Select your alphabet">
-                        <option value="1" class="rotor-option">Alphabet 1</option>
-                        <option value="2" class="rotor-option">Alphabet 2</option>
-                        <option value="3" class="rotor-option">Alphabet 3</option>
-                        <option value="4" class="rotor-option">Alphabet 4</option>
-                        <option value="5" class="rotor-option">Alphabet 5</option>
-                    </optgroup>
+            <div class="message">
+                <div class="text-box">
+                    <input type="text" class="text-field" id="text-field" placeholder="Type your message.">
+                </div>
+                <div class="button">
+                    <button id="button-submit" type="submit"> Encrypt </button>
+                </div>
+                <div class="rotor">
+                    <select name="Select your alphabet" class="rotor-selection" id="first-selection">
+                        <optgroup label="Select your alphabet" >
+                            <option value="1" class="rotor-option" id="1">Alphabet 1
+                                
+                            </option>
+                            <option value="2" class="rotor-option">Alphabet 2</option>
+                            <option value="3" class="rotor-option">Alphabet 3</option>
+                            <option value="4" class="rotor-option">Alphabet 4</option>
+                            <option value="5" class="rotor-option">Alphabet 5</option>
+                        </optgroup>
+                        </select>
+                    <select name="Select your alphabet" class="rotor-selection" id="second-selection">
+                        <optgroup label="Select your alphabet">
+                            <option value="1" class="rotor-option">Alphabet 1</option>
+                            <option value="2" class="rotor-option">Alphabet 2</option>
+                            <option value="3" class="rotor-option">Alphabet 3</option>
+                            <option value="4" class="rotor-option">Alphabet 4</option>
+                            <option value="5" class="rotor-option">Alphabet 5</option>
+                        </optgroup>
                     </select>
-                <select name="Select your alphabet" class="rotor-selection">
-                    <optgroup label="Select your alphabet">
-                        <option value="1" class="rotor-option">Alphabet 1</option>
-                        <option value="2" class="rotor-option">Alphabet 2</option>
-                        <option value="3" class="rotor-option">Alphabet 3</option>
-                        <option value="4" class="rotor-option">Alphabet 4</option>
-                        <option value="5" class="rotor-option">Alphabet 5</option>
-                    </optgroup>
-                </select>
-                <select name="Select your alphabet" class="rotor-selection">
-                    <optgroup label="Select your alphabet">
-                        <option value="1" class="rotor-option">Alphabet 1</option>
-                        <option value="2" class="rotor-option">Alphabet 2</option>
-                        <option value="3" class="rotor-option">Alphabet 3</option>
-                        <option value="4" class="rotor-option">Alphabet 4</option>
-                        <option value="5" class="rotor-option">Alphabet 5</option>
-                    </optgroup>
-                </select>
+                    <select name="Select your alphabet" class="rotor-selection" id="third-selection">
+                        <optgroup label="Select your alphabet">
+                            <option value="1" class="rotor-option">Alphabet 1</option>
+                            <option value="2" class="rotor-option">Alphabet 2</option>
+                            <option value="3" class="rotor-option">Alphabet 3</option>
+                            <option value="4" class="rotor-option">Alphabet 4</option>
+                            <option value="5" class="rotor-option">Alphabet 5</option>
+                        </optgroup>
+                    </select>
+                    <script src="./js/enigma.js">code(getElementById('first-selection'),getElementById('second-selection'),getElementById('third-selection'),getElementById('text-field'))</script>
+                </div>
+            </div>
+            <div class="encrypted">
+                <h3>Encrypted</h3>
+                <p>
+                    <script src="./js/enigma.js">
+                        code(getElementById('first-selection'),getElementById('second-selection'),getElementById('third-selection'),getElementById('text-field')).encrypted
+                    </script>
+                </p> 
+            </div>
+            <div class="decrypted">
+                <h3>Decrypted</h3>
+                <p>
+                    <script src="./js/enigma.js">
+                        code(getElementById('first-selection'),getElementById('second-selection'),getElementById('third-selection'),getElementById('text-field')).decrypted
+                    </script>
+                </p> 
             </div>
         </div>
-        <div class="encrypted">
-            <h3>Encrypted</h3>
-            Code result <br><br><br><br> Henlo
-        </div>
-        <div class="decrypted">
-            <h3>Decrypted</h3>
-            Code result <br><br><br><br> Henlo
-        </div>
-    </div>
-</body>
+        <footer class="rodape">
+            <p>LEONARDO GIROTO GARCIA © 
+                <span id="current_date">
+                    <script>
+                        const ano = document.getElementById("current_date");
+                        const anoAtual = new Date();
+                        ano.innerHTML = anoAtual.getFullYear();
+                    </script>
+                </span>
+            </p>
+        </footer>
+    </body>
 </html>

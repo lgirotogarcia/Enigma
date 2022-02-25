@@ -35,8 +35,7 @@ const code = function(fast, middle, slow, code){
     return results;
 };
 
-console.log(code(1,5,4, 'A enigma funciona'));
-
-
+console.log(code(3,2,5, 'pois venha').decrypted);
+code(1,4,2,'olar')
 
 module.exports = code;
