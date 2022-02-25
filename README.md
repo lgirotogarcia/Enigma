@@ -1,4 +1,4 @@
-***Hello there!***
+***Hello there!*** <br>
 I'm creating my first "big" project, an encrypting app in JavaScript.
 I'm still creating a visual for this app, be patient please <3
 
@@ -9,7 +9,7 @@ At the moment, you can use in the terminal (and it similar), but soon, you'll be
 Thanks to passing!
 
 ----------------------------------------------------
-***Eai!***
+***Eai!*** <br>
 Estou criando meu primeiro "grande" projeto, um app de encriptação em JavaScript.
 Eu ainda estou criando um visual pra esse app, por favor, seja paciente <3
 
