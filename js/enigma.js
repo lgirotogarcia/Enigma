@@ -33,9 +33,9 @@ const code = function(fast, middle, slow, code){
     }
 
     const encrypted = encrypto(fast, middle, slow, code).encrypted;
-    const inverted = invertText(encrypto(fast, middle, slow, code).encrypted)  /* Outra maneira de resolver esse problema de inverter os textos, é inverter os alfabetos, porém, acredito que seja mais dificil*/
+    const inverted = invertText(encrypto(fast, middle, slow, code).encrypted);  /* Outra maneira de resolver esse problema de inverter os textos, é inverter os alfabetos, porém, acredito que seja mais dificil*/
     const decrypted = decrypto(fast, middle, slow, inverted).decrypted;
-    const finalDecrypt = invertText(decrypted)
+    const finalDecrypt = invertText(decrypted);
 
     const results = {
         encrypted: encrypted,
@@ -45,7 +45,7 @@ const code = function(fast, middle, slow, code){
     return results;
 };
 
-console.log(code(1,5,4, 'aaaaaaaaaaaaaaaaaaaaaaaaa'));
+console.log(code(1,5,4, 'A enigma funciona'));
 
 
 

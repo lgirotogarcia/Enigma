@@ -1,5 +1,4 @@
 const discs = require('./discs.js');
-const returnAlphabet = require('./returnAlphabet.js')
 
 
 const decriptRotor = function (number,criptMessage){
