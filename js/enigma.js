@@ -35,7 +35,12 @@ const code = function(fast, middle, slow, code){
     return results;
 };
 
-console.log(code(3,2,5, 'pois venha').decrypted);
-code(1,4,2,'olar')
+console.log(code(3,2,5, 'abababababc'));
+
+const input1 = document.getElementById('first-selection');
+const input2 = document.getElementById('second-selection');
+const input3 = document.getElementById('third-selection');
+const inputText = document.getElementById('text-field');
+document.getElementById('button-submit').onclick(console.log(code(input1.value,input2.value,input3.value,inputText.value)));
 
 module.exports = code;

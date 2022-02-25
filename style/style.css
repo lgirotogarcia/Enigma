@@ -35,7 +35,7 @@ h1 {
     font-size: 30px;
 }
 
-button {
+#button-submit {
     width: fit-content;
     height: 55px;
     border-bottom-left-radius: 0px;
@@ -52,7 +52,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#button-submit:hover {
     color: rgb(37, 36, 36);
     background-color: rgb(186,186,186);
     border-color:rgb(186,186,186);
@@ -102,7 +102,7 @@ button:hover {
     margin: none;
     padding: none;
     border: none;
-    margin-left: 3px;
+    margin-right: 3px;
 }
 
 optgroup, .rotor-option {

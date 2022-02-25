@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet">
+        <script src='./js/enigma.js' defer></script>
     <title>Encrypt project</title>
     </head>
     <body>
@@ -17,19 +18,11 @@
                     Encrypt Project
                 </h1>
             </div>
-            <div class="message">
-                <div class="text-box">
-                    <input type="text" class="text-field" id="text-field" placeholder="Type your message.">
-                </div>
-                <div class="button">
-                    <button id="button-submit" type="submit"> Encrypt </button>
-                </div>
+            <form class="message">
                 <div class="rotor">
                     <select name="Select your alphabet" class="rotor-selection" id="first-selection">
                         <optgroup label="Select your alphabet" >
-                            <option value="1" class="rotor-option" id="1">Alphabet 1
-                                
-                            </option>
+                            <option value="1" class="rotor-option">Alphabet 1</option>
                             <option value="2" class="rotor-option">Alphabet 2</option>
                             <option value="3" class="rotor-option">Alphabet 3</option>
                             <option value="4" class="rotor-option">Alphabet 4</option>
@@ -54,9 +47,14 @@
                             <option value="5" class="rotor-option">Alphabet 5</option>
                         </optgroup>
                     </select>
-                    <script src="./js/enigma.js">code(getElementById('first-selection'),getElementById('second-selection'),getElementById('third-selection'),getElementById('text-field'))</script>
                 </div>
-            </div>
+                <div class="text-box">
+                    <input type="text" class="text-field" id="text-field" placeholder="Type your message.">
+                </div>
+                <div class="button">
+                    <input id="button-submit" type="submit" value="Encrypt"> </input>
+                </div>
+            </form>
             <div class="encrypted">
                 <h3>Encrypted</h3>
                 <p>
